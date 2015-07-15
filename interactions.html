@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+        <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+        <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css"
+        rel="stylesheet" type="text/css">
+        <script type="text/javascript">
+            $(window).load(function(){
+              $('body').scrollspy({
+                  target: '.bs-docs-sidebar',
+                  offset: 40
+              });
+            });
+        </script>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    
+    <body>
+        <div class="section text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 fixed">
+                        <ul class="nav nav-justified nav-pills">
+                            <li>
+                                <h4>iSpree</h4>
+                            </li>
+                            <li class="">
+                                <a href="index.html">Mockup</a>
+                            </li>
+                            <li >
+                                <a href="#">Design System</a>
+                            </li>
+                            <li>
+                                <a href="screens.html">App Screens</a>
+                            </li>
+                            <li class="active">
+                                <a href="interactions.html">Interactions</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="container">
+                <div class="row">
+                    <!--Nav Bar -->
+                    <nav class="bs-docs-sidebar col-sm-2 hidden-xs">
+                        <ul id="sidebar" class="nav nav-stacked fixed">
+                            <li>
+                                <a href="#GroupA">Overview </a>
+                                <ul class="nav nav-stacked">
+                                    <li>
+                                        <a href="#GroupASub1">Info</a>
+                                    </li>
+                                    <li>
+                                        <a href="#GroupASub2">How to use assets</a>
+                                    </li>
+                                    <li>
+                                        <a href="#GroupASub3">Branding</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#GroupB">Screen Transitions</a>
+                                <ul class="nav nav-stacked">
+                                	<li>
+                                        <a href="#GroupBSub1">Splash to Categories</a>
+                                    </li>
+                                    <li>
+                                        <a href="#GroupBSub2">Categories to Products</a>
+                                    </li>
+                                    <li>
+                                        <a href="#GroupBSub3">Open Categories</a>
+                                    </li>
+                                    <li>
+                                        <a href="#GroupBSub4">Products to A Product</a>
+                                    </li>
+                                    <li>
+                                        <a href="#GroupBSub5">Product Screen </a>
+                                    </li>
+                                    <li>
+                                        <a href="#GroupBSub6">Product to Gallery</a>
+                                    </li>
+                                    <li>
+                                        <a href="#GroupBSub7">Gallery Screen</a>
+                                    </li>
+                                    <li>
+                                        <a href="#GroupBSub8">Open Productlist</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#GroupC">States </a>
+                                <ul class="nav nav-stacked">
+                                    <li>
+                                        <a href="#GroupCSub1">Pressed</a>
+                                    </li>
+                                    <li>
+                                        <a href="#GroupCSub2">Loading</a>
+                                    </li>
+                                    <li>
+                                        <a href="#GroupCSub2">Label Autoscroll</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- <li>
+                                <a href="#GroupD">Iconography</a>
+                                <ul class="nav nav-stacked">
+                                    <li>
+                                        <a href="#GroupDSub1">UI Icons</a>
+                                    </li>
+                                    <li>
+                                        <a href="#GroupDSub2">Loaders</a>
+                                    </li>
+                                </ul>
+                            </li> -->
+                        </ul>
+                    </nav>
+                    <!--Main Content -->
+                    <div class="col-xs-12 col-sm-10 contentwrap" >
+                    	
+                        <section id="GroupA" class="group col-xs-12">
+                            <h2>Overview</h2>
+                            <div id="GroupASub1" class="subgroup">
+                                <h4>General Information</h4>
+                                <ul>
+                                	<li>Animations of transitions are recorded in 60 frames per second and this is a base</li>
+                                	<li>Animation lenght is described as [no of frames / 60] fe. 0.5 sec = [30/60] </li>
+                                	<li>All animations are eased "ease-in - ease-out" to give more organic feeling</li>
+                                	<li>Animations are shown on iPhone 6 - 375pt x 667pt Canvas but timings remaing the same for other devices</li>
+                                	<li>Back transitions triggered by "back" button on the navbar are instant  </li>
+                                	<li>Popup / overlay close transitions are played 2x speed of an opening transitions</li>
+                                	<li>Color transformations from one to another are in hex codes fe. white to black [#FFFFFF to #000000]</li>
+                                	<li>Opacity transformations in % of opacity, opaque to transparent [100% to 0%]</li>
+                                </ul>
+                            </div>
+                            <div id="GroupASub2" class="subgroup">
+                                <h4>How to use assets</h4>
+                                <ul>
+                                	<li>Below is the section of a single transition<br><img src="img/interaction-assets.png" width="50%" style="border:3px solid #337cbb"></li>
+                                	<li>You can download high quality videos of transitions by clicking <i>Download HQ Video</i> </li>
+ 									<li>Click <i>Download Animation Timings</i> for high quality videos of transitions with time markers per each new subanimation. Analyse it frame by frame</li>
+                                	<li>To do it open *.mov files in QuickTime Player and move left-right arrows</li>
+                                	<li>00060 = 1 sec</li>
+                                	<li>ALWAYS refer to Timings videos for animation analysis and reference</li>
+                                </ul>
+                            </div>
+                            <div id="GroupASub3" class="subgroup">
+                                <h4>Branding</h4>
+                                Here goes Icon deliverables...
+                            </div>
+                        </section>
+                        
+                        <section id="GroupB" class="group col-xs-12">
+                            <h2>Screen Transitions</h2>
+                            
+                            <div id="GroupBSub1" class="subgroup">
+                            	<h3>Splash screen to categories</h3>
+                                <div class="col-md-4">
+										<i class="fa fa-1x fa-play "></i>
+										<br>Splash screen fades out 
+										<br><i class="fa fa-1x fa-fw -download fa-long-arrow-right"></i>Animated loader appears <i>circle-loader-medium</i> 
+										<br><i class="fa fa-1x fa-fw -download fa-long-arrow-right"></i>Categories fall info screen
+										<br><i class="fa fa-1x fa-stop "></i>
+									<br>
+									<br>
+									<span class="text-info">This sequence is captured from a working prototype</span>
+									Circle physics works after they fall in. Gravity vector is always down == earth so if we rotate or tilt screen vectory stays synced with gyroscope. As a result we can play with circles and mix them by rotating a phone.
+									<br>
+									<br>
+									 <a href="files/splash-categories.mov"><i class="fa fa-1x fa-fw fa-cloud-download"></i>Download HQ Video</a>
+                                </div>
+                                <div class="col-xs-12 col-sm-8 col-md-8 videowrap">
+	                                <video width="320" height="568" controls loop>
+									  	<source src="files/splash-categories.mp4" type="video/mp4">
+									  	<!-- <source src="movie.ogg" type="video/ogg"> -->
+										Your browser does not support the video tag.
+									</video>	
+									<br>
+									<br>
+                                	<a href="files/splash-categories.mp4" target="_blank">Open Preview in New Window</a>
+									<br>
+									<br>
+                                </div>
+                            </div>
+                            
+                            <div id="GroupBSub2" class="subgroup">
+                            	<h3>Categories to products</h3>
+                                <div class="col-md-4">
+                                	<i class="fa fa-1x fa-play "></i>
+										<br>Category circle is tapped [10/60] 
+										<br><i class="fa fa-1x fa-fw -download fa-long-arrow-right"></i>circle grows to a factor of 1.2 initial size [10/60], feedback is given in a form of 3 circle that grows in a procedural animation [20/60] (refer to source code) 
+										<br><i class="fa fa-1x fa-fw -download fa-long-arrow-right"></i>selection is approved by clicking on "Show * categories" button
+										<br><i class="fa fa-1x fa-fw -download fa-long-arrow-right"></i>non-selected circles and UI elements fades-out [10/60] 
+										<br><i class="fa fa-1x fa-fw -download fa-long-arrow-right"></i>Selected circles shrink [20/60] as they give a birth to a  set of loaders that grows while moving to assume positions on product grid [40/60] .  <i>circle-loader-medium</i> loader is used 
+										<br><i class="fa fa-1x fa-fw -download fa-long-arrow-right"></i>Products screen UI slides in [20/60]
+										<br><i class="fa fa-1x fa-fw -download fa-long-arrow-right"></i>Loaded products apppear on grid by growing and fading in [20/60] with at least [3/60] delay
+										<br><i class="fa fa-1x fa-stop "></i>
+										<br> 
+										<br>
+										Transition from Category selection screen to a screen containing selected product
+									<br>
+									<br>
+									 <a href="files/categories-products.mov"><i class="fa fa-1x fa-fw fa-cloud-download"></i>Download HQ Video</a>
+									 <br>
+									 <a href="files/categories-products-timings.mov"><i class="fa fa-1x fa-fw fa-cloud-download"></i>Download Animation Timings</a>
+                                </div>
+                                <div class="col-xs-12 col-sm-8 col-md-8 videowrap">
+	                                <video width="375" height="667" controls loop>
+									  	<source src="files/categories-products.mp4" type="video/mp4">
+									  	<!-- <source src="movie.ogg" type="video/ogg"> -->
+										Your browser does not support the video tag.
+									</video>	
+									<br>
+									<br>
+                                	<a href="files/categories-products.mp4" target="_blank">Open Preview in New Window</a>
+									<br>
+									<br>
+                                </div>
+                            </div>
+                            
+                            <div id="GroupBSub3" class="subgroup">
+                            	<h3>Tab bar open categories</h3>
+                                <div class="col-md-4">
+									<i class="fa fa-1x fa-play "></i>
+										<br>Button is pressed 
+										<br><i class="fa fa-1x fa-fw -download fa-long-arrow-right"></i>Button animation plays [20/60] as circle underlay expands [30/60] (circle color changes from #C4C4C4 to #FFFFFF)
+										<br><i class="fa fa-1x fa-fw -download fa-long-arrow-right"></i>Category screen fades in [10/60] circles falls in 
+										<br><i class="fa fa-1x fa-stop "></i>
+									<br>
+									<br>
+									When "categories" button on tab bar (bottom left)  or "back button" on products screen's navigation bar is pressed we go to categories view. Selected category circles are enlarged.
+									<br>
+									<br>
+									 <a href="files/products-categories.mov"><i class="fa fa-1x fa-fw fa-cloud-download"></i>Download HQ Video</a>
+									 <br>
+									 <a href="files/products-categories-timings.mov"><i class="fa fa-1x fa-fw fa-cloud-download"></i>Download Animation Timings</a>
+                                </div>
+                                <div class="col-xs-12 col-sm-8 col-md-8 videowrap">
+	                                <video width="375" height="667" controls loop>
+									  	<source src="files/products-categories.mp4" type="video/mp4">
+									  	<!-- <source src="movie.ogg" type="video/ogg"> -->
+										Your browser does not support the video tag.
+									</video>	
+									<br>
+									<br>
+                                	<a href="files/products-categories.mp4" target="_blank">Open Preview in New Window</a>
+									<br>
+									<br>
+                                </div>
+                            </div>
+                            
+                            <div id="GroupBSub4" class="subgroup">
+                            	<h3>Products grid to a single product</h3>
+                                <div class="col-md-4">
+                                	<i class="fa fa-1x fa-play "></i>
+                                	<br>Product circle is clicked ,feedback is [10/60]
+                                	<br><i class="fa fa-1x fa-fw -download fa-long-arrow-right"></i>
+                                	Other products and selected product label fades out [10/60]
+                                	<br><i class="fa fa-1x fa-fw -download fa-long-arrow-right"></i>                               	Circle colored after selected product's categoru color expands [30/60] while selected product't photo fades out to 10% transparency [20/60] loader appears
+                                	<br><i class="fa fa-1x fa-fw -download fa-long-arrow-right"></i>
+                                	After product Screen is preloaded part of it fades in repleacing faded picture from grid [10/60]
+                                	<br><i class="fa fa-1x fa-fw -download fa-long-arrow-right"></i>
+                                	Colored circle contracts [30/60] full view of product screen is visible
+                                	<br><i class="fa fa-1x fa-stop"></i>
+                                	<br>
+                                	<br>
+									After selection a screen's accent color equals products category border color
+									<br>
+									<br>
+									 <a href="files/products-aproduct.mov"><i class="fa fa-1x fa-fw fa-cloud-download"></i>Download HQ Video</a>
+									 <br>
+									 <a href="files/products-aproduct-timings.mov"><i class="fa fa-1x fa-fw fa-cloud-download"></i>Download Animation Timings</a>
+                                </div>
+                                <div class="col-xs-12 col-sm-8 col-md-8 videowrap">
+	                                <video width="375" height="667" controls loop>
+									  	<source src="files/products-aproduct.mp4" type="video/mp4">
+									  	<!-- <source src="movie.ogg" type="video/ogg"> -->
+										Your browser does not support the video tag.
+									</video>	
+									<br>
+									<br>
+                                	<a href="files/products-aproduct.mp4" target="_blank">Open Preview in New Window</a>
+									<br>
+									<br>
+                                </div>
+                            </div>
+                            
+                            <div id="GroupBSub5" class="subgroup">
+                            	<h3>Product screen interactions and navigation</h3>
+                                <div class="col-md-3">
+									<i class="fa fa-1x fa-play "></i>
+									<br>Miniature are scrolled with elastic delay effect. [2/60] delay for neighbours, [4/60] for the rest of miniatures
+									<br><i class="fa fa-1x fa-fw -download fa-long-arrow-right"></i>Product navigation button ( tab bar - bottom right) is pressed [20/60]
+									<br><i class="fa fa-1x fa-fw -download fa-long-arrow-right"></i>Circle underlay appears [40/60] [#C4C4C4 to #FFFFFF ] as sidebar slides to left and labels appear [40/60]
+									<br><i class="fa fa-1x fa-fw -download fa-long-arrow-right"></i>Button is pressed - feedback [10/60], indicator dot slides to new position [20/60] while labels on the way morph size [10/60] to grow, [10/60] to shrink
+									<br><i class="fa fa-1x fa-stop"></i>
+									<br>
+									<br>
+									 <a href="files/a-product.mov"><i class="fa fa-1x fa-fw fa-cloud-download"></i>Download HQ Video</a>
+									 <br>
+									 <a href="files/a-product-timings.mov"><i class="fa fa-1x fa-fw fa-cloud-download"></i>Download Animation Timings</a>
+                                </div>
+                                <div class="col-xs-12 col-sm-8 col-md-8 videowrap">
+	                                <video width="375" height="667" controls loop>
+									  	<source src="files/a-product.mp4" type="video/mp4">
+									  	<!-- <source src="movie.ogg" type="video/ogg"> -->
+										Your browser does not support the video tag.
+									</video>	
+									<br>
+									<br>
+                                	<a href="files/a-product.mp4" target="_blank">Open Preview in New Window</a>
+									<br>
+									<br>
+                                </div>
+                            </div>
+                            
+                            
+                            <div id="GroupBSub6" class="subgroup">
+                            	<h3>Product to a photo gallery transition and interactions</h3>
+                                <div class="col-md-4">
+                                	<i class="fa fa-1x fa-play "></i>
+                                		<br>Tap on picture to open gallery, miniatures shrings to nav dots [20/60]
+                                		<br><i class="fa fa-1x fa-fw -download fa-long-arrow-right"></i>Swipe to change picture
+                                		<br><i class="fa fa-1x fa-fw -download fa-long-arrow-right"></i>Pinch to zoom-in picture
+                                		<br><i class="fa fa-1x fa-fw -download fa-long-arrow-right"></i>Double-tap to zoom-out
+									<br><i class="fa fa-1x fa-stop"></i>
+									<br>
+									<br>
+									 <a href="files/product-gallery.mov"><i class="fa fa-1x fa-fw fa-cloud-download"></i>Download HQ Video</a>
+									 <br>
+									 <a href="files/product-gallery-timings.mov"><i class="fa fa-1x fa-fw fa-cloud-download"></i>Download Animation Timings</a>
+                                </div>
+                                <div class="col-xs-12 col-sm-8 col-md-8 videowrap">
+	                                <video width="375" height="667" controls loop>
+									  	<source src="files/product-gallery.mp4" type="video/mp4">
+									  	<!-- <source src="movie.ogg" type="video/ogg"> -->
+										Your browser does not support the video tag.
+									</video>	
+									<br>
+									<br>
+                                	<a href="files/product-gallery.mp4" target="_blank">Open Preview in New Window</a>
+									<br>
+									<br>
+                                </div>
+                            </div>
+                            
+                            <div id="GroupBSub7" class="subgroup">
+                            	<h3>Gallery interactions</h3>
+                                <div class="col-md-4">
+                                	<i class="fa fa-1x fa-play "></i>
+                                	<br>Galery nav button is pressed - feedback [10/60], button animation is played [20/60] while underlay circle expands [20/60] fading-out to a radius of a device screen width. Dots grows into miniatures [20/60]
+									<br><i class="fa fa-1x fa-fw -download fa-long-arrow-right"></i>Miniature is taped -feedback [10/60] opacity [100% to 20% to 100%] 
+									<br><i class="fa fa-1x fa-fw -download fa-long-arrow-right"></i>Picture fades out [10/60] as loader appears <i>circle-loader-large</i>
+									<br><i class="fa fa-1x fa-fw -download fa-long-arrow-right"></i>New picture is loaded, fade-in [10/60]
+									<br><i class="fa fa-1x fa-fw -download fa-long-arrow-right"></i>Image is zoomed-in
+									<br><i class="fa fa-1x fa-fw -download fa-long-arrow-right"></i>Miniatures are scrolled with elastic delay effect. [2/60] delay for neighbours, [4/60] for the rest of miniatures
+									<br><i class="fa fa-1x fa-stop"></i>
+									<br>
+									<br>
+									 <a href="files/gallery.mov"><i class="fa fa-1x fa-fw fa-cloud-download"></i>Download HQ Video</a>
+									 <br>
+									 <a href="files/gallery-timings.mov"><i class="fa fa-1x fa-fw fa-cloud-download"></i>Download Animation Timings</a>
+                                </div>
+                                <div class="col-xs-12 col-sm-8 col-md-8 videowrap">
+	                                <video width="375" height="667" controls loop>
+									  	<source src="files/gallery.mp4" type="video/mp4">
+									  	<!-- <source src="movie.ogg" type="video/ogg"> -->
+										Your browser does not support the video tag.
+									</video>	
+									<br>
+									<br>
+                                	<a href="files/gallery.mp4" target="_blank">Open Preview in New Window</a>
+									<br>
+									<br>
+                                </div>
+                            </div>
+                            
+                            <div id="GroupBSub8" class="subgroup">
+                            	<h3>Open product list</h3>
+                                <div class="col-md-4">
+                                	<i class="fa fa-1x fa-play "></i>
+                                		<br>Tap on products list button, feedback is [10/60] button animation plays [20/60]
+                                		<br><i class="fa fa-1x fa-fw -download fa-long-arrow-right"></i>Circle underlay grows [40/60] [#C4C4C4 to #FFFFFF]
+                                		<br><i class="fa fa-1x fa-fw -download fa-long-arrow-right"></i>List items appears [15/60] opacity [0% to 100%] size [0 to 1.1 to 1 ] in a sequence with [3/60] delay between items
+									<br><i class="fa fa-1x fa-stop"></i>
+									Transition when product list button pressed no tab bar 
+									<br>
+									<br>
+									 <a href="files/open-productlist.mov"><i class="fa fa-1x fa-fw fa-cloud-download"></i>Download HQ Video</a>
+									 <br>
+									 <a href="files/open-productlist-timings.mov"><i class="fa fa-1x fa-fw fa-cloud-download"></i>Download Animation Timings</a>
+                                </div>
+                                <div class="col-xs-12 col-sm-8 col-md-8 videowrap">
+	                                <video width="375" height="667" controls loop>
+									  	<source src="files/open-productlist.mp4" type="video/mp4">
+									  	<!-- <source src="movie.ogg" type="video/ogg"> -->
+										Your browser does not support the video tag.
+									</video>	
+									<br>
+									<br>
+                                	<a href="files/open-productlist.mp4" target="_blank">Open Preview in New Window</a>
+									<br>
+									<br>
+                                </div>
+                            </div>
+                            
+                        </section>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 fixed">
+                        <ul class="nav nav-justified nav-pills">
+                            <li>
+                                <h4>iSpree</h4>
+                            </li>
+                            <li class="">
+                                <a href="index.html">Mockup</a>
+                            </li>
+                            <li >
+                                <a href="#">Design System</a>
+                            </li>
+                            <li>
+                                <a href="screens.html">App Screens</a>
+                            </li>
+                            <li class="active">
+                                <a href="interactions.html">Interactions</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>
